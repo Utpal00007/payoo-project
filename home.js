@@ -40,7 +40,25 @@ document.getElementById("add-money-btn")
  document.getElementById('withdraw-btn')
  .addEventListener('click',function(e){
     e.preventDefault()
-    console.log('withdraw btn clicked')
+    const agentNumber = document.getElementById('agent-number')
+    .value
+    const withdrawPin = parseInt( document.getElementById('withdraw-pin').value)
+     const amount = parseInt(document.getElementById('withdraw-amount').value)
+
+     const availableBalance =  parseInt(document.getElementById('available-balance').innerText)
+
+     if(agentNumber.length < 11) {
+        alert('Please provide valid agent number')
+        return 
+     } if (withdrawPin !== validPin ){
+        alert('please provide valid pin Number ')
+        return
+     }
+
+    const totalNewAvailableBalance = availableBalance - amount ;
+    console.log(totalNewAvailableBalance)
+
+    document.getElementById('available-balance').innerText = totalNewAvailableBalance
  })
 
 
@@ -51,14 +69,7 @@ document.getElementById("add-money-btn")
 
 
 
-
-
-
-
-
-
-
- // toggling feature
+// toggling feature
 document.getElementById('add-money')
 .addEventListener('click', function() {
     document.getElementById('cash-out-parent').style.display = 'none';
