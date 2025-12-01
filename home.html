@@ -55,12 +55,12 @@
             <h2> Get Bonus</h2>
 
         </div>
-                <div class="border-2 border-gray-300 text-center p-3 rounded-xl">
+                <div id="bill-button" class=" form-btn  border-2 border-gray-300 text-center p-3 rounded-xl">
             <img src="./assets/purse1.png" class="mx-auto" alt="">
             <h2> Pay Bill</h2>
 
         </div>
-                <div class="border-2 border-gray-300 text-center p-3 rounded-xl">
+                <div id="transaction-button" class=" form-btn  border-2 border-gray-300 text-center p-3 rounded-xl">
             <img src="./assets/transaction1.png" class="mx-auto" alt="">
             <h2> Transaction</h2>
 
@@ -73,10 +73,9 @@
 
      <!-- add money -->
 
-     <div class="all-form-seciton max-w-lg mx-auto  ">
+<div class="all-form-seciton max-w-lg mx-auto  ">
  
-    
-   <div class="form"  id="add-money-parent"  >
+<div class="form"  id="add-money-parent"  >
        <h1 class="my-5 font-bold"> Add Money</h1>
         <form class="bg-white rounded-2xl p-8">
         
@@ -109,7 +108,7 @@
             Add Money
         </button>
     </form>
-</div>
+ </div>
 
       <!-- cash out  -->
      
@@ -148,8 +147,27 @@
        <h1 class="my-5 font-bold"> Get Bonus </h1>
    </div>
 
+   <!-- pay bill -->
+    <div class="form" id="pay-bill-parent" style="display: none;">
+       <h1 class="my-5 font-bold">  Pay Bill </h1>
+   </div>
+
+   <!-- transaction -->
+    <div class="form" id="transaction-parent" style="display: none;">
+        <div class="flex justify-between items-center">
+            <h1 class="my-5 font-bold">Transaction</h1>
+            <p class="text-[#08080880] "> View All</p>
+        </div>
+   </div>
+
+     <div id ="transaction-container" >
+       
+     </div>   
+    
 
   </div>
+  
+   
   
 
 
